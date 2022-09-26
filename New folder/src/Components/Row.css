@@ -1,0 +1,46 @@
+.Netrow{
+    margin-top: 50px;
+    color: white;
+    margin-left: 20px;
+}
+.rowPosters::-webkit-scrollbar{
+    display: none;
+}
+.rowPosters{
+    display: flex;
+    overflow-y: hidden;
+    justify-content: center;
+    flex-grow: 1;
+    flex-wrap:wrap;
+    padding: 10px;
+    padding-bottom: 50px;
+    
+}
+.rowPoster{
+    object-fit: contain;
+    margin-right: 10px;
+    width: 197px;
+    height: 120px;
+    cursor: pointer;
+    transition: transform 450ms;
+}
+.masterCars{
+    text-decoration: none;
+    padding-bottom: 20px;
+}
+.rowCards p{
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+.rowPoster:hover{
+    transform: scale(1.08);
+    opacity: 1;
+}
+.rowPosterLarge{
+    height: 300px;
+}
+.rowPosterLarge:hover{
+    transform: scale(1.09);
+    opacity: 1;
+}

@@ -1,0 +1,115 @@
+.loginScreen{
+    position: relative;
+    height: 100%;
+    background: url(../data/bg1.jpg) center no-repeat;
+    background-color: black;
+    background-size: cover;
+}
+.loginGradient{
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    background: rgba(0,0,0,0.4);
+    background-image: linear-gradient(
+        to top,
+        rgba(0,0,0,0.8) 0,
+        rgba(0,0,0,0) 60%,
+        rgba(0,0,0, 0.8) 100%
+    );
+}
+.loginScreen-logo{
+    position: fixed;
+    top: 0px;
+    left: 20px;    
+    object-fit: contain;
+    width: 120px;
+    cursor: pointer;
+}
+.LoginButton{
+    position: fixed;
+    right: 20px;
+    top:20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #e50914;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+.loginBody{
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    z-index: 1;
+    color: white;
+    padding: 20px;
+}
+.loginBody h1{
+    font-size: 3.125rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.loginBody h2{
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.loginBody h3{
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.loginInput{
+    margin: 20px;
+}
+
+.loginInput form input{
+    padding: 10px;
+    outline-width: 0;
+    height: 30px;
+    width: 30%;
+    border: none;
+    max-width: 600px;
+}
+.getStarted{
+    padding: 16px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #e50914;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+@media (max-width: 750px){
+    .loginBody {
+        position: absolute;
+        top:150px;
+    }
+    .loginBody h1{
+        font-size: 1.8rem;
+    }
+    .loginBody h2{
+        font-size: 1.2rem;
+    }
+    .loginBody h3{
+        font-size: 0.8rem;
+    }
+    .loginInput form{
+        margin-top: 80px;
+       display: flex;
+       flex-direction: column;
+       gap: 10px;
+    }
+    .loginInput form input{
+        padding: 10px;
+        outline-width: 0;
+        height: 30px;
+        width: 92%;
+        border: none;
+        max-width: 600px;
+    }
+}

@@ -1,0 +1,110 @@
+.LoadingScreen{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    overflow: hidden;
+}
+.loadingNetflix{
+    position: relative;
+    width: 360px;
+    height: 520px;
+    overflow: hidden; 
+    transform: scale(0.8);
+}
+.loadingNetflix::after{
+    content: '';
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 400%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #000,
+        #000
+    );
+    z-index: 3;
+    animation: netAnimate 2s linear forwards;
+}
+@keyframes netAnimate{
+    0%{
+        right: 0;
+    }
+    100%{
+        right: -400%;
+    }
+}
+.loadingNetflix::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -100px;
+    width: 100%;
+    height: 120px;
+    background: black;
+    z-index: 2;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    transform: scale(1.5);
+}
+.loadingNetflix span{
+    position: absolute;
+    top: 0;
+    width: 120px;
+    height: 100%;
+    background: white;
+}
+.loadingNetflix span:nth-child(1){
+    background: #b00612;
+    left: 0;
+}
+.loadingNetflix span:nth-child(2){
+    background: #e50815;
+    left: 0px;
+    z-index: 1;
+    transform-origin: top left;
+    transform: skewX(25.8deg);
+    box-shadow: 0 0 40px  rgba(0,0,0,1);
+}
+.loadingNetflix span:nth-child(3){
+    background: #b00612;
+    right: 0;
+}
+.loadingLogo h3{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: arial;
+    color: white;
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+.loadingLogo p{
+    position: absolute;
+    top: 680px;
+    left: 0;
+    width: 100vw;
+    margin: 0;
+    padding-bottom: 10px;
+    text-align: center;
+    font-family: arial;
+    color: white;
+    font-size: 20px;
+}
+@media (max-width: 750px){
+    .loadingLogo p{
+        top: 670px;
+        font-size: 10px;
+    }
+}
