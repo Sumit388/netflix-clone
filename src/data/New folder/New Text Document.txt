@@ -1,0 +1,9 @@
+For downloading thumbnails
+
+https://img.youtube.com/vi/<<ID>>/maxresdefault.jpg
+
+
+FETCH RELATED VIDEOS
+
+
+https://api.themoviedb.org/3/movie/<<ID>>/videos?api_key=<<KEY>>&language=en-US

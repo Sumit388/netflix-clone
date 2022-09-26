@@ -1,0 +1,68 @@
+.NetBanner{
+    position: relative;
+    height: 448px;
+    color: white;
+    object-fit: contain;
+}
+.NetBanner .NetBannerContents{
+    margin-left: 30px;
+    padding-top: 140px;
+}
+.NetBanner .netBannerTitle{
+    font-size: 3rem;
+    font-weight: 800;
+    padding-bottom: 0.3rem;
+}
+.NetBanner .netBannerDescription{
+    width: 45rem;
+    line-height: 1.3;
+    padding-top: 1rem;
+    font-size: 0.8rem;
+    max-width: 360px;
+    height: 80px;
+}
+.NetBanner .banerFadeButton{
+    height: 7.4rem;
+    background: linear-gradient(
+        180deg,
+        transparent,
+        #111,
+        black
+    );
+}
+.NetBanner .netBannerButton{
+    cursor: pointer;
+    color: white;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: 0.2vw;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-right: 1rem;
+    padding-top: 0.5rem;
+    background-color: rgba(51,51,51, 0.51);
+    padding-bottom: 0.5rem;
+}
+
+.NetBanner .netBannerButton:hover{
+    color: black;
+    background-color: #e6e6e6;
+    transition: all 0.2s;
+}
+
+@media (max-width: 750px){
+    .NetBanner .netBannerDescription{
+        width: 45rem;
+        line-height: 1.3;
+        padding-top: 1rem;
+        font-size: 0.8rem;
+        max-width: 300px;
+        height: 150px;
+    }
+    .NetBanner .netBannerTitle{
+        font-size: 2rem;
+        font-weight: 800;
+        padding-bottom: 0.3rem;
+    }
+}
