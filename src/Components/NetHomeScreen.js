@@ -9,13 +9,7 @@ import Row from './Row'
 
 function NetHomeScreen(props) {
 const[loading,setLoading]=useState(()=>{return true});
-const [update,setUpate]=useState();
-let a=0;
-setInterval(()=>{
-  
-  setUpate(a++);
-   a=update;
-},5000)
+
 
 useEffect(()=>{
   setTimeout(()=>{
