@@ -14,7 +14,6 @@ function DetailScreen(props) {
         async function fetchData(){
             const request= await axios.get(fetchUrl);
             setvideos(request.data.results);
-            console.log(request.data.results);
             return request;
         }
         fetchData();
