@@ -17,7 +17,7 @@ function Row({title, fetchUrl, isLargeRow=false, modifyDetails2}) {
             return request;
         }
         fetchData();
-    },[fetchUrl,movies]);
+    },[fetchUrl]);
 
 
     function truncate(string, n){
