@@ -11,6 +11,8 @@ function Row({title, fetchUrl, isLargeRow=false, modifyDetails2}) {
         async function fetchData(){
             const request= await axios.get(fetchUrl);
             setMovies(request.data.results);
+            
+       
             return request;
         }
         fetchData();
@@ -32,7 +34,7 @@ function Row({title, fetchUrl, isLargeRow=false, modifyDetails2}) {
              (!isLargeRow && movie.backdrop_path) )&& (
                 <Link to='/videos' className='masterCars'>
                 <div className="rowCards" onClick={()=>modifyDetails2(movie)}>
-            <img src={`${baseUrl}${isLargeRow ? movie.poster_path: movie.backdrop_path}`} alt={movie.name} 
+            <img src={`${baseUrl}${isLargeRow ? movie.poster_path: movie.backdrop_path}`} alt="reload to update"
                      className={`rowPoster ${isLargeRow && "rowPosterLarge"}`}  />
                      <p>
                         {truncate( movie?.title||movie?.name||movie?.original_name , 25)}

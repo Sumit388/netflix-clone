@@ -20,7 +20,6 @@ function App() {
 
   let modifyDetails=(value)=>{
          SetDetails(value);
-         console.log(details);
   }
   const dispatch=useDispatch();
   useEffect(()=>{

@@ -9,11 +9,18 @@ import Row from './Row'
 
 function NetHomeScreen(props) {
 const[loading,setLoading]=useState(()=>{return true});
+const [update,setUpate]=useState();
+let a=0;
+setInterval(()=>{
+  
+  setUpate(a++);
+   a=update;
+},5000)
 
 useEffect(()=>{
   setTimeout(()=>{
    setLoading(false);
-  },3000)
+  },5000)
 },[])
   return (
     <div className='NetHomeScreen' >
@@ -23,7 +30,7 @@ useEffect(()=>{
      {loading?(<LoadingScreen/>):(<></>)}
      <div className="wholefronSection" style={loading?{display: `none`}:{display: `block`}}>
      <NetBanner/>
-
+      
      <Row 
        title="TRENDING NOW"
        fetchUrl={requests.fetchTrending}
