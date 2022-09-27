@@ -8,14 +8,7 @@ import Row from './Row'
 
 
 function NetHomeScreen(props) {
-const[loading,setLoading]=useState(()=>{return true});
 
-
-useEffect(()=>{
-  setTimeout(()=>{
-   setLoading(false);
-  },5000)
-},[])
   return (
     <div className='NetHomeScreen' >
      <NetNav/>

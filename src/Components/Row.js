@@ -7,13 +7,7 @@ import { Link } from 'react-router-dom';
 function Row({title, fetchUrl, isLargeRow=false, modifyDetails2}) {
     const baseUrl="https://image.tmdb.org/t/p/original/";
     const[movies,setMovies]=useState([]);
-    const [update,setUpate]=useState();
-let a=0;
-setInterval(()=>{
-  
-  setUpate(a++);
-   a=update;
-},5000)
+ 
     useEffect(()=>{
         async function fetchData(){
             const request= await axios.get(fetchUrl);
