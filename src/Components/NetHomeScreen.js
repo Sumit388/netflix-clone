@@ -29,14 +29,14 @@ useEffect(()=>{
        title="TRENDING NOW"
        fetchUrl={requests.fetchTrending}
        isLargeRow
-       modifyDetails2={props.modifyDetails}/>
-      <Row title="Top Rated" fetchUrl={requests.fetchTopRated} modifyDetails2={props.modifyDetails} />
-      <Row title="Action Movies" fetchUrl={requests.fetchActionmovie} modifyDetails2={props.modifyDetails} />
-      <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies}  modifyDetails2={props.modifyDetails}/>
-      <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} modifyDetails2={props.modifyDetails}/>
-      <Row title="Romantic Movies" fetchUrl={requests.fetchRomanceMovies} modifyDetails2={props.modifyDetails} />
-      <Row title="Netflix Orginals" fetchUrl={requests.fetchNetflixOriginal}  modifyDetails2={props.modifyDetails} />
-      <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} modifyDetails2={props.modifyDetails} />
+       modifyDetails2={props.modifyDetails} delay={2000}/>
+      <Row title="Top Rated" fetchUrl={requests.fetchTopRated} modifyDetails2={props.modifyDetails} delay={4000}/>
+      <Row title="Action Movies" fetchUrl={requests.fetchActionmovie} modifyDetails2={props.modifyDetails} delay={6000}/>
+      <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies}  modifyDetails2={props.modifyDetails} delay={8000}/>
+      <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} modifyDetails2={props.modifyDetails} delay={10000}/>
+      <Row title="Romantic Movies" fetchUrl={requests.fetchRomanceMovies} modifyDetails2={props.modifyDetails} delay={12000}/>
+      <Row title="Netflix Orginals" fetchUrl={requests.fetchNetflixOriginal}  modifyDetails2={props.modifyDetails} delay={14000} />
+      <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} modifyDetails2={props.modifyDetails} delay={16000}/>
 
     </div>
     </div>

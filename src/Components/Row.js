@@ -3,11 +3,19 @@ import { useEffect } from 'react';
 import './Row.css'
 import axios from './axios'
 import { Link } from 'react-router-dom';
+import load from "../data/load.jpg"
 
-function Row({title, fetchUrl, isLargeRow=false, modifyDetails2}) {
+function Row({title, fetchUrl, isLargeRow=false, modifyDetails2, delay}) {
     const baseUrl="https://image.tmdb.org/t/p/original/";
     const[movies,setMovies]=useState([]);
- 
+    const[prede,setprede]=useState(()=>{return true});
+   
+    useEffect(()=>{
+        setTimeout(()=>{
+         setprede(false);
+        },delay)
+      },[delay])
+
     useEffect(()=>{
         async function fetchData(){
             const request= await axios.get(fetchUrl);
@@ -30,21 +38,22 @@ function Row({title, fetchUrl, isLargeRow=false, modifyDetails2}) {
             {title}
         </h2>
          <div className="rowPosters">
-        {movies.map(movie=>{
+         {!prede?(
+        movies.map(movie=>{
             
             setTimeout(()=>{},3000);
             return ((isLargeRow && movie.poster_path )||
              (!isLargeRow && movie.backdrop_path) )&& (
                 <Link to='/videos' className='masterCars'>
                 <div className="rowCards" onClick={()=>modifyDetails2(movie)}>
-            <img src={`${baseUrl}${isLargeRow ? movie.poster_path: movie.backdrop_path}`} alt="reload to update"
+            <img src={`${baseUrl}${isLargeRow ? movie.poster_path: movie.backdrop_path}`||load} alt="reload to update"
                      className={`rowPoster ${isLargeRow && "rowPosterLarge"}`}  />
                      <p>
                         {truncate( movie?.title||movie?.name||movie?.original_name , 25)}
                      </p>
                      </div></Link>);
-                    })
-        }
+                    })):(<></>)}
+        
         </div>
     </div>
   )
