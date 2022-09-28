@@ -46,7 +46,7 @@ function Row({title, fetchUrl, isLargeRow=false, modifyDetails2, delay}) {
              (!isLargeRow && movie.backdrop_path) )&& (
                 <Link to='/videos' className='masterCars'>
                 <div className="rowCards" onClick={()=>modifyDetails2(movie)}>
-            <img src={`${baseUrl}${isLargeRow ? movie.poster_path: movie.backdrop_path}`||load} alt="reload to update"
+            <img src={`${baseUrl}${isLargeRow ? movie.poster_path: movie.backdrop_path}`} alt={load}
                      className={`rowPoster ${isLargeRow && "rowPosterLarge"}`}  />
                      <p>
                         {truncate( movie?.title||movie?.name||movie?.original_name , 25)}
