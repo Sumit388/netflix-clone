@@ -5,23 +5,22 @@ import './SignInScreenCompo.css'
 
 
 function SignInScreenCompo() {
-    
+// Useref for getting the value of email & password from the input element of the form
 const emailRef=useRef(null);
 const passwordRef=useRef(null);
 
+//on clicking the signup button this function will run & call firebase funtion to make new entry for new user.
    const register = (e) =>{
     e.preventDefault();
     auth.createUserWithEmailAndPassword(emailRef.current.value, passwordRef.current.value).then((authUser)=>{
-      console.log(authUser);
     }).catch(error=>{
       alert(error.message);
     });
    }
-
+//on clicking the signin button this function will run & call firebase funtion to sign in if entry for user is already present.
    const signIn =(e)=>{
     e.preventDefault();
     auth.signInWithEmailAndPassword(emailRef.current.value, passwordRef.current.value).then((authUser)=>{
-        console.log(authUser);
       }).catch(error=>{
         alert(error.message);
       });

@@ -1,10 +1,11 @@
 import {  createSlice } from '@reduxjs/toolkit';
 
+//defined initial state
 const initialState = {
 user: null,
 };
 
-
+//creating a user slice defining user state
 export const userSlice = createSlice({
   name: 'user',
   initialState,

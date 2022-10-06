@@ -23,6 +23,7 @@
 }
 .NetBanner .banerFadeButton{
     height: 7.4rem;
+    z-index: 8;
     background: linear-gradient(
         180deg,
         transparent,

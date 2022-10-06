@@ -8,9 +8,11 @@ import Row from './Row'
 
 
 function NetHomeScreen(props) {
+
+  //state to check if I want to show the loading screen or not.
 const[loading,setLoading]=useState(()=>{return true});
 
-
+//truning off the loading screen off after 3 sec.
 useEffect(()=>{
   setTimeout(()=>{
    setLoading(false);
@@ -20,11 +22,16 @@ useEffect(()=>{
     <div className='NetHomeScreen' >
      <NetNav/>
 
-
+{/* If loading  satate is true then show loading screen else rest of the compopnent*/}
      {loading?(<LoadingScreen/>):(<></>)}
      <div className="wholefronSection" style={loading?{display: `none`}:{display: `block`}}>
+
+
+
      <NetBanner/>
       
+
+      {/* url from which the data will be fetched is passed as an prop, also the function that set the details in the app component for the detailScreen is also passed as prop */}
      <Row 
        title="TRENDING NOW"
        fetchUrl={requests.fetchTrending}

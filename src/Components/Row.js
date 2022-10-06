@@ -3,13 +3,11 @@ import { useEffect } from 'react';
 import './Row.css'
 import axios from './axios'
 import { Link } from 'react-router-dom';
-import load from "../data/load.jpg"
 
 function Row({title, fetchUrl, isLargeRow=false, modifyDetails2, delay}) {
     const baseUrl="https://image.tmdb.org/t/p/original/";
     const[movies,setMovies]=useState([]);
     const[prede,setprede]=useState(()=>{return true});
-    const[error,setError]=useState(()=>{return false});
    
     useEffect(()=>{
         setTimeout(()=>{
@@ -47,8 +45,7 @@ function Row({title, fetchUrl, isLargeRow=false, modifyDetails2, delay}) {
                 <Link to='/videos' className='masterCars'>
                 <div className="rowCards" onClick={()=>modifyDetails2(movie)}>
             <img src={`${baseUrl}${isLargeRow ? movie.poster_path: movie.backdrop_path}`}  alt="Please reload to view"
-                     className={`rowPoster ${isLargeRow && "rowPosterLarge"}`}  onError={()=>{setError(true)}} onLoad={()=>{setError(false)}}/>
-                     {error?(<img src={load} alt="error"/>):(<></>)}
+                     className={`rowPoster ${isLargeRow && "rowPosterLarge"}`}  />
                      <p>
                         {truncate( movie?.title||movie?.name||movie?.original_name , 25)}
                      </p>

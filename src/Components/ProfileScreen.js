@@ -23,6 +23,7 @@ function ProfileScreen() {
                     <h3>
                         Current Plan: Free.
                     </h3>
+                    {/*calling the signout button from firebase if Sign Out button is clicked*/}
                     <button onClick={()=>{auth.signOut()}} className='ProfileScreenSignOut'>Sign Out</button>
                 </div>
             </div>

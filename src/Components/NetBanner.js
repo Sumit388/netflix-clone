@@ -8,6 +8,8 @@ function NetBanner() {
 
     const [movie,setMovie]= useState([]);
 
+    //fetching the different movies from TMDB and setting the value of state movie to one random movie
+    //so that the top banner details are random everytime we open the app. 
     useEffect (()=>{
        async function fetchData(){
             const request =await axios.get(requests.fetchNetflixOriginal);
@@ -21,6 +23,7 @@ function NetBanner() {
        fetchData();
     },[])
     
+    //function to trunctae the string that is provided to the function
     function truncate(string, n){
       return string?.length>n ? string.substring(0, n-1)+ '...' :string;
     }
